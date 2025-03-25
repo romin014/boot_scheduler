@@ -1,4 +1,4 @@
-package com.example.boot_schedule_management;
+package com.example.boot_scheduler;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
