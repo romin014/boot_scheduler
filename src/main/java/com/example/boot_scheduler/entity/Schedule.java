@@ -3,6 +3,8 @@ package com.example.boot_scheduler.entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
+
 
 @Getter
 @AllArgsConstructor
@@ -12,7 +14,5 @@ public class Schedule {
     private String todo_contents;
     private String author;
     private int password;
-    private String date_of_creation;
-    private String date_of_modification;
-
+    private LocalDateTime date;
 }

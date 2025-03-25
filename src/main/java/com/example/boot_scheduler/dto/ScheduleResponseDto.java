@@ -3,6 +3,8 @@ package com.example.boot_scheduler.dto;
 import com.example.boot_scheduler.entity.Schedule;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
+
 @Getter
 public class ScheduleResponseDto {
     private Long id;
@@ -10,8 +12,7 @@ public class ScheduleResponseDto {
     private String todo_contents;
     private String author;
     private int password;
-    private String date_of_creation;
-    private String date_of_modification;
+    private LocalDateTime date;
 
     public ScheduleResponseDto(Schedule schedule){
         this.id = schedule.getId();
@@ -19,7 +20,6 @@ public class ScheduleResponseDto {
         this.todo_contents = schedule.getTodo_contents();
         this.author = schedule.getAuthor();
         this.password = schedule.getPassword();
-        this.date_of_creation = schedule.getDate_of_creation();
-        this.date_of_modification = schedule.getDate_of_modification();
+        this.date = schedule.getDate();
     }
 }
