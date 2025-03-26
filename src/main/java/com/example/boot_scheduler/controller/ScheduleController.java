@@ -96,7 +96,7 @@ public class ScheduleController {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
 
-        Schedule updatedSchedule = new Schedule(id, schedule.getTodo_title(), dto.getTodo_contents(), schedule.getAuthor(), schedule.getPassword(), LocalDateTime.now());
+        Schedule updatedSchedule = new Schedule(id, schedule.getTodo_title(), dto.getTodo_contents(), dto.getAuthor(), schedule.getPassword(), LocalDateTime.now());
         scheduleList.put(id, updatedSchedule);
 
         return new ResponseEntity<>(new ScheduleResponseDto(updatedSchedule), HttpStatus.OK);
